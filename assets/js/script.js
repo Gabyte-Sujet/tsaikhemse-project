@@ -11,4 +11,33 @@ for (let i = 0; i < bl; i++) {
 			this.textContent = "დამატება";
 		}
 	});
-}
+};
+
+const menuIcon = document.querySelector('.burger');
+const navbar = document.querySelector('.res-menu');
+let a = document.querySelectorAll('header .res-menu ul li a');
+
+
+
+menuIcon.addEventListener("click", () => {
+	navbar.classList.toggle("change");
+	menuIcon.classList.toggle("change1");
+});
+
+
+a.forEach((e)=> {
+	e.addEventListener('click', (event) => {
+		event.preventDefault();
+		navbar.classList.add("change");
+		menuIcon.classList.add("change1");
+	})
+})
+
+let pageDown = document.querySelector('.page-down');
+pageDown.addEventListener('click', () => {
+	window.scroll({
+		top: 800, 
+		left: 0, 
+		behavior: 'smooth' 
+	   });
+})

@@ -133,29 +133,6 @@
         	</div>
 		</div>
 	</footer>
+	<script src="assets/js/script.js"></script>
 </body>
-<script type="text/javascript">
-	let add_buttons = document.getElementsByClassName('add');
-
-	let bl = add_buttons.length;
-	for (let i = 0; i < bl; i++) {
-		add_buttons[i].addEventListener('click', function(){
-			// console.log(i);
-			this.classList.toggle('active');
-			if (this.classList.contains('active')){
-				this.textContent = "დამატებულია";
-			} else {
-				this.textContent = "დამატება";
-			}
-		});
-	}
-
-	const menuIcon = document.querySelector('.burger');
-	const navbar = document.querySelector('.res-menu');
-
-	menuIcon.addEventListener("click", () => {
-		navbar.classList.toggle("change");
-		menuIcon.classList.toggle("change1");
-	})
-</script>
 </html>
